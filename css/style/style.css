@@ -1,0 +1,601 @@
+/*#######################public*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,900;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+/* 
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+ */
+:root{
+   --fontFamily:'Quicksand', sans-serif ;
+   --textColor:#009961;
+   background-color:#ddd ;
+   --linkcolor: #333;
+
+
+}
+/* ======================Start NavBar====================  */
+
+ .navbar{
+     background-color: #fff;
+     padding: 22px 50px;
+ }
+
+.navbar .navbar-brand img{
+    max-height: 40px;
+
+}
+.navbar .nav-item {
+    margin: 14px;
+}
+
+.navbar .dropdown-toggle span .navbar .closeIcon{
+    display: none;
+
+}
+
+
+.navbar .nav-item::before ,.navbar .nav-item::after{
+    position: absolute;
+    font-size: 26px;
+    color: var(--textColor);
+ 
+    top: -2%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+
+.navbar .nav-item::before{
+    content: "[";
+   
+
+    left:-17%;
+   
+}
+
+.navbar .nav-item::after{
+    content: "]";
+   
+
+    right: -17%;
+   
+}
+
+
+.navbar .nav-item:hover:before{
+  
+    opacity: 1;
+    visibility: visible;
+    left:-1px ;
+}
+
+
+
+
+.navbar .nav-item:hover::after{
+  
+    opacity: 1;
+    visibility: visible;
+    right: -1px ;
+}
+
+.navbar .nav-item .active .nav-link{
+    color: #009961;
+}
+
+.navbar .nav-item .nav-link{
+    color:var(--linkcolor);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--fontFamily);
+
+    
+}
+.navbar .dropdown-toggle::after{
+
+    display:none ;
+}
+
+.navbar .nav-item.active .nav-link {
+    color: var(--textColor);
+}
+
+.navbar .nav-item.dropdown .nav-link.dropdown-toggle{
+    color: var(--textColor);
+    
+
+
+}
+
+.navbar .nav-item.dropdown .nav-link.dropdown-toggle::before{
+    opacity: 1;
+    visibility: visible;
+    left: -2px;
+ 
+}
+
+.navbar .nav-item.dropdown .nav-link.dropdown-toggle::after{
+    opacity: 1;
+    visibility: visible;
+    right: -2px;
+
+
+}
+.navbar .dropdown-menu{
+    display: block;
+    background-color: var(--textColor);
+    position: absolute;
+    top: 106%;
+    transform:  scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    transform-origin:top ;
+    box-shadow: 0px 7px 7px 0px rgb(48, 51, 50 , 9%);
+}
+.navbar .nav-item:hover .dropdown-menu{
+    transform:  scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover{
+    background-color: transparent;
+    color: #ccc;
+
+}
+.btnpublic{
+    background-color: var(--textColor);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px 10px;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+
+.btnpublic::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  
+  height: 400%;
+  background: #fff;
+  top: 11%;
+  left: -128px;
+  transform: rotate(45deg);
+
+  transition: all .4s ease;
+  z-index: -1;
+
+
+}
+
+.btnpublic:hover:before{
+    
+    top: -151%;
+    left:  8px;
+    transform: rotate(45deg);
+  
+  }
+  .btnpublic:hover{
+      color: var(--textColor);
+  }
+
+.navbar{
+    background-color: #fff;
+    padding: 22px 50px;
+}
+@media (max-width:991px) {
+    .navbar{
+        background-color: #fff;
+        padding: 14px;
+    }
+    .navbar .navbar-toggler i{
+        color: var(--textColor);
+    }
+    .navbar .nav-item::before{
+        display: none;
+       
+
+    }
+    
+    header .content p{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    header .content h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .navbar .nav-item::after{
+        display: none;
+
+       
+    }
+    .navbar .navbar-collapse{
+        position: fixed;
+        background: #fafafa;
+        right: -100%;
+        width: 50%;
+        top: 0;
+        height: 100% !important ;
+        transition:  all .3s ease;
+        overflow: scroll;
+    }
+
+
+    .navbar .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    
+    }
+
+    .navbar .dropdown-toggle span{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color:var(--textColor);
+        text-align: center;
+        border-radius: 3px;
+        line-height: 30px;
+
+        
+    
+    }
+    
+    .navbar .dropdown-toggle span i{
+        font-size: 10px;
+        color: #fff;
+
+        
+    
+    }
+    .navbar .navbar-nav{
+        padding-top: 50px;
+
+    }
+    
+.navbar .nav-item {
+   
+     border: 1px solid #f0f0f0;
+}
+
+.navbar .nav-item .nav-link {
+    padding: 15px 14px;
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: var(--fontFamily);
+
+}
+.navbar .dropdown-menu{
+    position: unset;
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    border: 0;
+    box-shadow: unset;
+    display: none;
+
+}
+.navbar .dropdown-menu .dropdown-item:last-child
+{
+    border-bottom: 0;
+}
+
+.navbar .nav-item.show .dropdown-menu{
+    display: block;
+
+}
+  
+.navbar .closeIcon{
+    display: block;
+    height: 35px;
+    width: 35px;
+    
+    background: var(--textColor);
+    border-radius: 50%;
+    line-height: 50%;
+    text-align: center;
+    margin: 40px 10px 0;
+
+}
+
+.navbar .closeIcon i{
+    font-size: 11px;
+    color: #fff;
+}
+
+.navbar .social-item{
+    margin:  20px 10px;
+
+}
+
+.navbar .social-item a{
+    width: 40px;
+    height: 40px;
+    background-color: var(--textColor);
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50px;
+    
+}
+
+.navbar .social-item a i{
+   color: #fff;
+   margin-right:12px ;
+    
+}
+
+}
+
+/* ======================End NavBar====================  */
+
+/* ======================Start Header====================  */
+
+
+
+header{
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 94px);
+    display: flex;
+    align-items: center;
+}
+header::before{
+    content:  "";
+    position: absolute;
+    background-image: url("/img/leaf2.png");
+    width: 100%;
+    height: 100%;
+    animation: imgHeader 3s alternate i;
+    background-repeat: no-repeat;
+    background-size: 15%;
+
+}
+header .row{
+    align-items: center;
+    justify-content: space-between;
+}
+header .img-box{
+    content: "";
+    margin-left: -20%;
+    
+}
+
+header .img-box {
+    position: relative;
+  }
+header .img-box::before{
+    content: "";
+    position: absolute;
+    background-image: url("/img/sl_5.png");
+    width: 40%;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 10%;
+    left: 30%;
+    z-index: 1;
+    animation: imgHeader 2s alternate infinite;
+
+}
+header .img-box::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background-image: url("/img/sl_4.png");
+    right: 0;
+    top: -45%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: imgBox 2s alternate infinite;
+
+}
+@keyframes imgBox {
+   0%{
+       transform:perspective(1000px) rotateY(50deg ) translate3d(0,0,0);
+   }
+   100%{
+    transform:perspective(1000px)  rotateY(-50deg );
+}
+  }
+
+header .row .img-box img {
+    margin-left: 100px;
+}
+@keyframes imgHeader {
+    0%{
+        transform: translateY(4%);
+    }
+    
+}
+
+header .content p {
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 35px;
+    font-family: var(--fontFamily);
+
+}
+header .content h1 {
+    font-weight: 700;
+    font-size: 49px;
+
+}
+header .content h1 span{
+    color: ver(--textColor);
+    font-family: var(--fontFamily);
+
+}
+header .img-box .main-img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.4);
+
+
+}
+/* ======================End Header====================  */
+.parent{
+    perspective: 900px;
+
+}
+
+.parent .child{
+    width: 200px;
+    height: 200px;
+    background-color: #009961;
+    margin: 40px auto;
+    transition: all .3s ease-in;
+
+}
+.parent .child:hover{
+    transform: translate3d(50px,40px,180px);
+
+}
+@media (max-width:991px) {
+
+    header .content p{
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    
+    header .content h1{
+        font-size: 33px;
+        font-weight: 700;
+    }
+
+
+}
+
+@media (max-width:575px) {
+    header .img-box{
+        position: relative;
+        width: 60%;
+        margin: auto;
+    }
+    header .content{
+        text-align: center;
+        margin-top: 31px;
+    }
+    header .content p{
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    
+    header .content h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    
+}
+/* ==============================start worksite============================ */
+
+.working{
+
+}
+.working .card{
+    width: 90%;
+    
+    height: 100%;
+
+    background-color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    padding:  35px 22px 45px 22px;
+    box-shadow: 0px 0px 150px 0px #eeeeee;
+    margin-left: 10%;
+
+}
+.working .card:hover{
+    border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  background-color: var(--textColor);
+
+}
+
+.working .card .card-body {
+    text-align: center;
+    display: inline-block;
+   
+}
+.working .card .card-body .card-title{
+    color: #282828;
+  font-size: 19px;
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  text-decoration: none;
+
+ }
+ .working .card .card-body .card-text{
+     color: #646464;
+
+}
+
+.working .card:hover .card-body .card-title{
+
+ }
+
+@media (max-width:1211px) {
+    header .container-fliud{
+        width: 85%;
+    }
+    
+    
+}
+/* ==============================End worksite============================== */
+
+
+
+/* ================start about-us ================ */
+.about-us{
+    padding: 100px 0;
+  }
+  /* .about-us .about-img img{
+    width: 100%;
+  } */
+  .about-us p{
+    color: #646464 ;
+    margin-top: 40px;
+  }
+  .about-us ul {
+    list-style: none;
+    margin-bottom:0;
+  }
+  .about-us ul li {
+    padding-left: 25px ;
+    line-height: 34px;
+  }
+  .about-us ul li i{
+    color: var(--textColor);
+    margin-right: 10px;
+  }
+  /* ================end about-us================ */
